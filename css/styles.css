@@ -11007,19 +11007,22 @@ footer.footer .social-link:hover {
   }
 }
 .masthead {
-  min-height: 30rem;
+  min-height: 100vh;
   position: relative;
   display: table; /* 또는 flex 등 상황에 맞게 */
-  width: 100%;
-  height: auto; /* 또는 100vh 등 필요에 따라 */
-  padding-top: 8rem; /* 내부 콘텐츠가 있다면 유지 */
-  padding-bottom: 8rem; /* 내부 콘텐츠가 있다면 유지 */
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/main.png");
+  /* \height: auto;  또는 100vh; 이 부분을 조정할 수 있습니다. */
+  /* 가로를 100%로 채우고 세로 비율을 유지하려면 height는 auto가 적합할 수 있으나,
+     콘텐츠가 없으면 높이가 0이 될 수 있으므로 min-height나 padding으로 최소 높이를 확보해야 합니다.
+     현재 padding-top과 padding-bottom이 있으므로 어느 정도 높이는 확보됩니다. */
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-masthead.png");
   background-position: center center;
   background-repeat: no-repeat;
-  /* background-size: cover;  이 부분을 수정합니다. */
-  background-size: auto 100%; /* 높이를 100%로 맞추고 너비는 자동 조정 */
+  /* background-size: auto 100%; 이 부분을 수정합니다. */
+  background-size: 100% auto; /* 너비를 100%로 맞추고 높이는 자동 조정 */
 }
+
 
 .masthead h1, .masthead .h1 {
   font-size: 4rem;
@@ -11028,7 +11031,6 @@ footer.footer .social-link:hover {
 }
 @media (min-width: 992px) {
   .masthead {
-    height: 100vh;
   }
   .masthead h1, .masthead .h1 {
     font-size: 5.5rem;

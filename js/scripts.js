@@ -100,21 +100,21 @@ window.addEventListener('DOMContentLoaded', event => {
             position: new naver.maps.LatLng(37.5012763, 127.039607), // 예식장 위도, 경도로 변경
             map: map,
             // (선택) 마커 클릭 시 정보창 표시
-            title: "OOO웨딩홀"
+//            title: "OOO웨딩홀"
         });
 
         // (선택) 정보창 내용 (마커 클릭 시)
-        const infoWindow = new naver.maps.InfoWindow({
-            content: '<div style="padding:10px;"><b>OOO웨딩홀</b><br>서울시 강남구 테헤란로 123</div>'
-        });
-
-        naver.maps.Event.addListener(marker, "click", function(e) {
-            if (infoWindow.getMap()) {
-                infoWindow.close();
-            } else {
-                infoWindow.open(map, marker);
-            }
-        });
+//        const infoWindow = new naver.maps.InfoWindow({
+//            content: '<div style="padding:10px;"><b>OOO웨딩홀</b><br>서울시 강남구 테헤란로 123</div>'
+//        });
+//
+//        naver.maps.Event.addListener(marker, "click", function(e) {
+//            if (infoWindow.getMap()) {
+//                infoWindow.close();
+//            } else {
+//                infoWindow.open(map, marker);
+//            }
+//        });
 
     }
 });
