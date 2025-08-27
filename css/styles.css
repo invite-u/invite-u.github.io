@@ -11009,16 +11009,18 @@ footer.footer .social-link:hover {
 .masthead {
   min-height: 30rem;
   position: relative;
-  display: table;
+  display: table; /* 또는 flex 등 상황에 맞게 */
   width: 100%;
-  height: auto;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/main.png");
+  height: auto; /* 또는 100vh 등 필요에 따라 */
+  padding-top: 8rem; /* 내부 콘텐츠가 있다면 유지 */
+  padding-bottom: 8rem; /* 내부 콘텐츠가 있다면 유지 */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-masthead.png");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover;  이 부분을 수정합니다. */
+  background-size: auto 100%; /* 높이를 100%로 맞추고 너비는 자동 조정 */
 }
+
 .masthead h1, .masthead .h1 {
   font-size: 4rem;
   margin: 0;
