@@ -11014,7 +11014,7 @@ footer.footer .social-link:hover {
   height: auto; /* 또는 100vh 등 필요에 따라 */
   padding-top: 8rem; /* 내부 콘텐츠가 있다면 유지 */
   padding-bottom: 8rem; /* 내부 콘텐츠가 있다면 유지 */
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-masthead.png");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/main.png");
   background-position: center center;
   background-repeat: no-repeat;
   /* background-size: cover;  이 부분을 수정합니다. */
