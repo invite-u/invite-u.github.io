@@ -16,6 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ueabinviux"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -38,137 +39,136 @@
 <!--                <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>-->
             </div>
         </header>
-        <!-- About-->
-        <section class="content-section bg-light" id="about">
-            <div class="container px-4 px-lg-5 text-center">
+
+        <!-- Invitation Section -->
+        <section class="content-section bg-light text-center" id="invitation">
+            <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-10">
-                        <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                        <p class="lead mb-5">
-                            This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-                            <a href="https://unsplash.com/">Unsplash</a>
-                            !
+                        <h2>INVITATION</h2>
+                        <p class="lead mb-4">
+                            서로에게 가장 귀한 선물이 될 두 사람이<br>
+                            오랜 기다림 끝에 부부의 연을 맺습니다.<br>
+                            함께 축복해주시면 더없는 기쁨으로 간직하겠습니다.
                         </p>
-                        <a class="btn btn-dark btn-xl" href="#services">What We Offer</a>
+                        <p class="lead">
+                            <strong>신랑 OOO &middot; 신부 OOO 올림</strong>
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Services-->
-        <section class="content-section bg-primary text-white text-center" id="services">
+        <!-- Calendar Section -->
+        <section class="content-section text-center" id="calendar">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading">
-                    <h3 class="text-secondary mb-0">Services</h3>
-                    <h2 class="mb-5">What We Offer</h2>
+                    <h2 class="mb-5">WEDDING DAY</h2>
                 </div>
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-smartphone"></i></span>
-                        <h4><strong>Responsive</strong></h4>
-                        <p class="text-faded mb-0">Looks great on any screen size!</p>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <!-- 여기에 달력 UI를 구성합니다.
+                             간단하게 텍스트로 표시하거나,
+                             참고 템플릿처럼 CSS로 스타일링된 달력을 만들 수 있습니다. -->
+                        <p class="lead mb-0"><strong>2024년 12월 21일 토요일 오후 1시</strong></p>
+                        <p class="lead"><strong>OOO웨딩홀 2층 컨벤션홀</strong></p>
                     </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
-                        <h4><strong>Redesigned</strong></h4>
-                        <p class="text-faded mb-0">Freshly redesigned for Bootstrap 5.</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-like"></i></span>
-                        <h4><strong>Favorited</strong></h4>
-                        <p class="text-faded mb-0">
-                            Millions of users
-                            <i class="fas fa-heart"></i>
-                            Start Bootstrap!
-                        </p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-mustache"></i></span>
-                        <h4><strong>Question</strong></h4>
-                        <p class="text-faded mb-0">I mustache you a question...</p>
-                    </div>
+                </div>
+                <!-- (선택) D-day 카운터 -->
+                <div class="mt-4">
+                    <p class="lead" id="dday">OOO ♥ OOO 결혼식이 <strong>000일</strong> 남았습니다.</p>
                 </div>
             </div>
         </section>
-        <!-- Callout-->
-        <section class="callout">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mx-auto mb-5">
-                    Welcome to
-                    <em>your</em>
-                    next website!
-                </h2>
-                <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a>
-            </div>
-        </section>
-        <!-- Portfolio-->
-        <section class="content-section" id="portfolio">
+        <!-- Gallery Section -->
+        <section class="content-section" id="gallery">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-center">
-                    <h3 class="text-secondary mb-0">Portfolio</h3>
-                    <h2 class="mb-5">Recent Projects</h2>
+                    <h2 class="mb-5">GALLERY</h2>
                 </div>
                 <div class="row gx-0">
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Stationary</div>
-                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
+                    <!-- 갤러리 이미지들을 여기에 추가합니다. -->
+                    <div class="col-lg-4 col-md-6">
+                        <a class="portfolio-item" href="assets/img/portfolio-1.jpg"> <!-- 이미지 클릭 시 크게 보일 이미지 경로 -->
+                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="갤러리 이미지 1" />
                         </a>
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Ice Cream</div>
-                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
+                    <div class="col-lg-4 col-md-6">
+                        <a class="portfolio-item" href="assets/img/portfolio-2.jpg">
+                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="갤러리 이미지 2" />
                         </a>
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strawberries</div>
-                                    <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
+                    <div class="col-lg-4 col-md-6">
+                        <a class="portfolio-item" href="assets/img/portfolio-3.jpg">
+                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="갤러리 이미지 3" />
                         </a>
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Workspace</div>
-                                    <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
-                        </a>
+                    <!-- 필요에 따라 더 많은 이미지 추가 -->
+                </div>
+            </div>
+        </section>
+        <!-- Location Section -->
+        <section class="content-section bg-light" id="location">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading text-center">
+                    <h2 class="mb-5">LOCATION</h2>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <p class="lead mb-3"><strong>OOO웨딩홀</strong></p>
+                        <p class="mb-4">서울시 강남구 테헤란로 123 (전화: 02-123-4567)</p>
+                    </div>
+                </div>
+                <!-- Naver Map -->
+                <div class="map" id="map">
+                    <!-- 네이버 지도가 여기에 표시됩니다. -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Transportation Section -->
+        <section class="content-section" id="transportation">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading text-center">
+                    <h2 class="mb-5">오시는 길</h2>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h4><i class="fas fa-subway"></i> 지하철</h4>
+                        <p class="lead mb-4">
+                            2호선 강남역 1번 출구, 도보 5분<br>
+                            9호선 신논현역 5번 출구, 도보 10분
+                        </p>
+
+                        <h4><i class="fas fa-bus"></i> 버스</h4>
+                        <p class="lead mb-4">
+                            간선버스: 140, 402, 420, 470<br>
+                            지선버스: 3412, 4412, 8541<br>
+                            (OOO 정류장 하차)
+                        </p>
+
+                        <h4><i class="fas fa-car"></i> 자가용</h4>
+                        <p class="lead mb-0">
+                            주차: 예식장 건물 내 주차장 이용 (2시간 무료)<br>
+                            네비게이션: OOO웨딩홀 또는 서울시 강남구 테헤란로 123
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Call to Action-->
-        <section class="content-section bg-primary text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-                <a class="btn btn-xl btn-light me-4" href="#!">Click Me!</a>
-                <a class="btn btn-xl btn-dark" href="#!">Look at Me!</a>
+
+        <!-- Share Section -->
+        <section class="content-section bg-primary text-white text-center" id="share">
+            <div class="container px-4 px-lg-5">
+                <h2 class="mb-4">마음을 전하세요</h2>
+                <button id="kakao-share-btn" class="btn btn-xl btn-light me-4">
+                    <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" alt="카카오톡 공유 보내기 버튼" />
+                    카카오톡 공유하기
+                </button>
+                <!-- (선택) 기타 공유 버튼 (예: URL 복사) -->
+                <!-- <button id="copy-url-btn" class="btn btn-xl btn-dark">URL 복사하기</button> -->
             </div>
         </section>
-        <!-- Map-->
-        <div class="map" id="contact">
-            <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-            <br />
-            <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small>
-        </div>
+
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container px-4 px-lg-5">
@@ -192,5 +192,16 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- Kakao SDK -->
+        <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.1/kakao.min.js"
+                integrity="sha384-kDljxUXHaJ9xAb2AzRd59Kx1qYNpsuVmsIYx9V1p2QKOqV1PZZnpC12JJU3zN/ND" crossorigin="anonymous"></script>
+        <script>
+            Kakao.init('f44167e5251975280c310048c78e3366');
+            console.log(Kakao.isInitialized());
+        </script>
     </body>
 </html>
