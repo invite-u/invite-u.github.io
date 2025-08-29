@@ -190,3 +190,38 @@ function fadeIn(el, display) {
         }
     })();
 };
+
+
+window.addEventListener('DOMContentLoaded', event => {
+    // ... (D-Day 계산 로직) ...
+
+    // 결혼식 날짜 및 시간 정보 표시 (달력 상단)
+    const weddingDateInfoElement = document.querySelector('.wedding-date-time-info');
+    if (weddingDateInfoElement) {
+        const weddingDateTime = new Date('2025-09-20T11:30:00'); // 결혼식 날짜 및 시간
+        const year = weddingDateTime.getFullYear();
+        const month = weddingDateTime.getMonth() + 1; // 0부터 시작하므로 +1
+        const day = weddingDateTime.getDate();
+        const daysOfWeek = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+        const dayName = daysOfWeek[weddingDateTime.getDay()];
+
+        let hours = weddingDateTime.getHours();
+        const minutes = weddingDateTime.getMinutes();
+        const ampm = hours >= 12 ? '오후' : '오전';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        const minutesStr = minutes < 10 ? '0' + minutes : minutes;
+
+        let displayTime;
+        if (minutes === 0) {
+            displayTime = `${ampm} ${hours}시`;
+        } else {
+            displayTime = `${ampm} ${hours}시 ${minutesStr}분`;
+        }
+
+        // '월' 부분을 span으로 감싸도록 수정
+        weddingDateInfoElement.innerHTML = `${year}년 <span class="highlight-month">${month}월</span> ${day}일 ${dayName} ${displayTime}`;
+    }
+
+    // ... (기타 스크립트) ...
+});

@@ -491,6 +491,10 @@ progress {
   font-weight: 300;
 }
 
+.small {
+  font-size: 0.8em;
+}
+
 .display-1 {
   font-size: calc(1.625rem + 4.5vw);
   font-weight: 300;
@@ -11112,3 +11116,201 @@ footer.footer .social-link:hover {
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
+
+#invitation {
+  background-image: url('../assets/img/invitation_bg.png'); /* 경로 수정됨 */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: 'Nanum Myeongjo', serif;
+  /* 텍스트 가독성을 위해 기존 bg-light를 유지하거나,
+     아래 주석 처리된 오버레이를 사용할 수 있습니다. */
+  /* color: #fff; */ /* 만약 배경이 어둡고 텍스트가 잘 안 보인다면 흰색 등으로 변경 */
+}
+
+/* General Info Text above Calendar */
+.wedding-date-time-info {
+    font-size: 1.2rem; /* 원하는 크기로 조절 */
+    color: #555;
+    margin-bottom: 25px; /* 달력과의 간격 */
+    font-family: 'Nanum Myeongjo', 'Noto Serif KR', serif; /* 선호하는 명조 계열 폰트 */
+}
+
+/* Calendar Section Styles - Reference Style */
+#calendar .wedding-calendar.reference-style {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 예시 폰트 스택 */
+    max-width: 320px; /* 원하는 달력 너비로 조절 */
+    margin: 0 auto; /* 가운데 정렬 */
+    background-color: #fff;
+    border: 1px solid #eaeaea; /* 연한 테두리 */
+    border-radius: 5px; /* 약간의 둥근 모서리 */
+    padding: 15px; /* 내부 여백 */
+    color: #333;
+}
+
+#calendar .reference-style .calendar-body .day-names,
+#calendar .reference-style .calendar-body .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 2px; /* 셀 사이의 미세한 간격 */
+}
+
+#calendar .reference-style .calendar-body .day-names span {
+    font-size: 0.8rem;
+    font-weight: 500; /* 약간 얇게 */
+    color: #777; /* 기본 요일 색상 */
+    padding: 8px 0;
+}
+
+#calendar .reference-style .calendar-body .day-names span.sunday,
+#calendar .reference-style .calendar-body .days .day-cell.sunday {
+    color: #e74c3c; /* 일요일 빨간색 */
+}
+
+#calendar .reference-style .calendar-body .day-names span.saturday,
+#calendar .reference-style .calendar-body .days .day-cell.saturday {
+    color: #3498db; /* 토요일 파란색 */
+}
+
+#calendar .reference-style .calendar-body .days .day-cell {
+    font-size: 0.9rem;
+    font-weight: 400; /* 일반 날짜 폰트 두께 */
+    padding: 8px 0; /* 셀 내부 세로 여백 */
+    border-radius: 3px; /* 약간의 둥근 모서리 (선택 사항) */
+    line-height: 1.5; /* 줄 간격 */
+    color: #555; /* 기본 날짜 색상 */
+    position: relative; /* 하트 아이콘 등을 위한 기준점 */
+}
+
+#calendar .reference-style .calendar-body .days .day-cell.empty {
+    visibility: hidden;
+}
+
+#calendar .reference-style .calendar-body .days .day-cell.wedding-day {
+    background-color: #e74c3c; /* 강조 배경색 (예: 일요일 빨간색) */
+    color: #fff !important; /* 글자색을 흰색으로 변경 (다른 .sunday/.saturday 규칙보다 우선 적용되도록 !important 사용 고려) */
+    font-weight: 700; /* 굵게 */
+    border-radius: 50%; /* 완전한 원형으로 만듦 */
+    width: 32px; /* 원의 크기 (day-cell의 padding과 line-height 고려하여 조절) */
+    height: 32px; /* 원의 크기 */
+    display: flex; /* 내부 숫자 중앙 정렬을 위해 */
+    align-items: center; /* 내부 숫자 중앙 정렬을 위해 */
+    justify-content: center; /* 내부 숫자 중앙 정렬을 위해 */
+    /* box-shadow: 0 0 5px rgba(0,0,0,0.2); */ /* 약간의 그림자 (선택 사항) */
+    /* 기존 padding을 제거하거나 크기에 맞게 조절해야 할 수 있음 */
+    padding: 0; /* width/height로 크기를 제어하므로 padding은 제거 */
+    margin: 0 auto; /* 부모(grid cell) 안에서 가운데 정렬 */
+}
+
+/* 하트 모양 아이콘을 위한 가상 요소 (FontAwesome 사용 예시) */
+/* FontAwesome을 HTML에 링크해야 함 */
+#calendar .reference-style .calendar-body .days .day-cell.wedding-day::after {
+    /* content: '\f004'; */ /* FontAwesome 하트 아이콘 유니코드 (solid heart) */
+    /* font-family: 'Font Awesome 5 Free'; */ /* 또는 'Font Awesome 6 Free' 등 버전 확인 */
+    /* font-weight: 900; */ /* Solid 아이콘은 900 */
+    /* color: #e74c3c; */
+    /* font-size: 1.5rem; */ /* 아이콘 크기 */
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* opacity: 0.3; */ /* 약간 투명하게 */
+    /* z-index: -1; */ /* 숫자 뒤로 보내기 */
+
+    /* 또는 이미지 배경으로 하트 사용 */
+    content: "";
+    background-image: url('../assets/img/heart_icon.png'); /* 하트 이미지 경로 (준비 필요) */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* 또는 cover, 또는 픽셀 크기 지정 */
+    width: 30px; /* 아이콘 크기 */
+    height: 30px; /* 아이콘 크기 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5; /* 투명도 조절 */
+    z-index: -1; /* 숫자 뒤로 */
+}
+
+/* 기존 Bootstrap lead 클래스와의 여백 조정을 위해 */
+#calendar .lead {
+    font-size: 1.1rem;
+}
+
+.wedding-date-time-info {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 25px;
+    font-family: 'Nanum Myeongjo', 'Noto Serif KR', serif;
+}
+
+.wedding-date-time-info .highlight-month {
+    font-weight: bold; /* 굵게 */
+    color: #e74c3c; /* 강조 색상 (예: 빨간색 계열) */
+    font-size: 1.1em; /* 현재 폰트 크기의 1.1배 (약간 크게) */
+    /* text-decoration: underline; */ /* 밑줄 (선택 사항) */
+    /* background-color: #fdf5e6; */ /* 연한 배경색 (선택 사항) */
+    /* padding: 0 3px; */ /* 배경색 사용 시 약간의 여백 */
+}
+
+/* 달력 내 월 표시 스타일 */
+#calendar .reference-style .calendar-month-display {
+    text-align: center;
+    margin-bottom: 20px; /* 달력 본문과의 간격 조절 */
+    padding-bottom: 15px; /* 구분선 위쪽 여백 */
+    border-bottom: 1px solid #f0f0f0; /* 연한 구분선 */
+}
+
+/* '9' 숫자 스타일 - 더 크게 강조 */
+#calendar .reference-style .calendar-month-display .month-number {
+    font-size: 3rem;   /* 숫자를 매우 크게 (예: 6rem, 또는 80px 등) */
+    font-weight: 200;  /* 매우 얇거나, 700으로 매우 굵게 등 원하는 스타일로 */
+    color: #2c3e50;    /* 숫자 색상 (예: 진한 회색/네이비 계열) */
+    line-height: 0.8;  /* 숫자가 너무 커서 위아래 간격이 벌어지는 것을 줄임 */
+    display: inline-block; /* line-height 조정을 위해 */
+    margin-right: 2px; /* '월' 텍스트와의 미세한 간격 조정 */
+}
+
+/* '월' 텍스트 스타일 */
+#calendar .reference-style .calendar-month-display .month-text {
+    font-size: 1.8rem; /* '월' 텍스트 크기 (숫자와 균형 맞게 조절) */
+    font-weight: 300;
+    color: #7f8c8d;    /* '월' 텍스트 색상 (숫자보다 연하게) */
+    margin-left: 5px;
+    vertical-align: baseline; /* 숫자와 '월' 텍스트의 하단 정렬 */
+}
+
+/* --- 나머지 달력 스타일 --- */
+
+/* 요일 이름 */
+#calendar .reference-style .calendar-body .day-names span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #777;
+    padding: 8px 0;
+}
+
+/* 날짜 셀 */
+#calendar .reference-style .calendar-body .days .day-cell {
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 8px 0;
+    line-height: 1.5;
+    color: #555;
+    position: relative;
+}
+
+#calendar {
+  background-image: url('../assets/img/calendar_bg.png'); /* 배경 이미지 경로 */
+  background-size: cover; /* 이미지가 섹션 전체를 덮도록 합니다 */
+  background-position: center center; /* 이미지를 중앙에 위치시킵니다 */
+  background-repeat: no-repeat; /* 이미지가 반복되지 않도록 합니다 */
+  padding-top: 50px; /* 내부 컨텐츠와 배경 이미지 상단과의 여백 (조절 가능) */
+  padding-bottom: 50px; /* 내부 컨텐츠와 배경 이미지 하단과의 여백 (조절 가능) */
+  /* color: #fff; */ /* 만약 배경 이미지가 어두워서 텍스트가 안 보인다면, 텍스트 색상을 밝게 변경 */
+}
+
+
+/* (일요일, 토요일, wedding-day 등 나머지 스타일은 이전과 동일하게 유지) */
