@@ -131,7 +131,47 @@
                 </div>
             </div>
         </section>
+        <!-- Location Section -->
+        <section class="content-section bg-light" id="location">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading text-center">
+                    <h1 class="mb-5">오시는 길</h1>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <p class="lead mb-3"><strong>마들원</strong></p>
+                        <p class="mb-4">서울특별시 노원구 하계동 180-1 (전화: 02-949-8000)</p>
+                    </div>
+                </div>
+                <!-- Naver Map -->
+                <div id="map" style="width:100%;height:400px;"></div>
+            </div>
+            <br>
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h4><i class="fas fa-subway"></i> 지하철</h4>
+                        <p class="lead mb-4">
+                            7호선 하계역 1번 출구, 도보 7분<br>
+                            7호선 공릉역 2번 출구, 도보 10분
+                        </p>
 
+                        <h4><i class="fas fa-bus"></i> 버스</h4>
+                        <p class="lead mb-4">
+                            간선버스: 105, 146, 150, 310<br>
+                            지선버스: 1132, 1137, 1224<br>
+                            (마들원 앞 정류장 하차)
+                        </p>
+
+                        <h4><i class="fas fa-car"></i> 자가용</h4>
+                        <p class="lead mb-0">
+                            주차: 마들원 건물 내 주차장 이용 가능<br>
+                            네비게이션: “마들원” 또는 서울특별시 노원구 하계동 180-1
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Gallery Section -->
         <section class="content-section" id="gallery">
@@ -160,55 +200,7 @@
                 </div>
             </div>
         </section>
-        <!-- Location Section -->
-        <section class="content-section bg-light" id="location">
-            <div class="container px-4 px-lg-5">
-                <div class="content-section-heading text-center">
-                    <h2 class="mb-5">LOCATION</h2>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-10 text-center">
-                        <p class="lead mb-3"><strong>OOO웨딩홀</strong></p>
-                        <p class="mb-4">서울시 강남구 테헤란로 123 (전화: 02-123-4567)</p>
-                    </div>
-                </div>
-                <!-- Naver Map -->
-                <div class="map" id="map">
-                    <!-- 네이버 지도가 여기에 표시됩니다. -->
-                </div>
-            </div>
-        </section>
 
-        <!-- Transportation Section -->
-        <section class="content-section" id="transportation">
-            <div class="container px-4 px-lg-5">
-                <div class="content-section-heading text-center">
-                    <h2 class="mb-5">오시는 길</h2>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <h4><i class="fas fa-subway"></i> 지하철</h4>
-                        <p class="lead mb-4">
-                            2호선 강남역 1번 출구, 도보 5분<br>
-                            9호선 신논현역 5번 출구, 도보 10분
-                        </p>
-
-                        <h4><i class="fas fa-bus"></i> 버스</h4>
-                        <p class="lead mb-4">
-                            간선버스: 140, 402, 420, 470<br>
-                            지선버스: 3412, 4412, 8541<br>
-                            (OOO 정류장 하차)
-                        </p>
-
-                        <h4><i class="fas fa-car"></i> 자가용</h4>
-                        <p class="lead mb-0">
-                            주차: 예식장 건물 내 주차장 이용 (2시간 무료)<br>
-                            네비게이션: OOO웨딩홀 또는 서울시 강남구 테헤란로 123
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Share Section -->
         <section class="content-section bg-primary text-white text-center" id="share">
@@ -256,6 +248,41 @@
         <script>
             Kakao.init('f44167e5251975280c310048c78e3366');
             console.log(Kakao.isInitialized());
+        </script>
+
+        <script>
+            var mapOptions = {
+                center: new naver.maps.LatLng(37.636540, 127.071323),
+                zoom: 16
+            };
+
+            var map = new naver.maps.Map('map', mapOptions);
+
+    // 마커 생성 및 지도에 추가
+    var marker = new naver.maps.Marker({
+        position: new naver.maps.LatLng(37.636540, 127.071323), // 마커를 표시할 위치 (지도 중심과 동일)
+        map: map, // 마커를 표시할 지도 객체
+        title: "마들원" // 마커에 마우스 오버 시 나타나는 툴팁 (선택 사항)
+        // icon: { // 커스텀 마커 아이콘 사용 시 (선택 사항)
+        //     url: 'assets/img/custom_marker.png', // 커스텀 마커 이미지 경로
+        //     size: new naver.maps.Size(32, 32), // 마커 이미지 크기
+        //     origin: new naver.maps.Point(0, 0),
+        //     anchor: new naver.maps.Point(16, 32) // 마커 이미지에서 기준점 (예: 아이콘 하단 중앙)
+        // }
+    });
+
+     var infowindow = new naver.maps.InfoWindow({
+         content: '<div style="padding:10px;text-align:center;min-width:150px;"><strong>마들원</strong><br>서울특별시 노원구 하계동 180-1</div>'
+     });
+
+     naver.maps.Event.addListener(marker, 'click', function() {
+         if (infowindow.getMap()) {
+             infowindow.close();
+         } else {
+             infowindow.open(map, marker);
+         }
+     });
+     infowindow.open(map, marker);
         </script>
     </body>
 </html>
