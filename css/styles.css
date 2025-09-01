@@ -11314,3 +11314,17 @@ footer.footer .social-link:hover {
 
 
 /* (일요일, 토요일, wedding-day 등 나머지 스타일은 이전과 동일하게 유지) */
+
+#gallery .content-section-heading h2 {
+  font-family: 'Nanum Brush Script', serif; /* Nanum Myeongjo를 우선 사용, 없으면 기본 serif체 */
+  /* 기존 h2 스타일 (크기 등)은 유지됩니다. 폰트만 변경합니다. */
+}
+
+
+#share {
+  background-color: #ffffff; /* 흰색 배경 */
+  /* 만약 텍스트 색상이 너무 밝다면, 여기서 어두운 색으로 지정합니다. */
+  /* color: #212529; */ /* 예: Bootstrap의 기본 텍스트 색상 (dark) */
+  padding-top: 7.5rem;    /* 위쪽 여백 (기존 content-section 과 유사하게) */
+  padding-bottom: 7.5rem; /* 아래쪽 여백 (기존 content-section 과 유사하게) */
+}
